@@ -1,0 +1,14 @@
+I created a much more comprehensive diagram based on both document images. It combines several views into one architecture sheet so the solution can be understood by developers, architects, QA, and business users.
+
+It includes high-level process flow, detailed data flow, catalogue/table overview, scheduler/query logic, reconciliation logic, Power BI reporting, per-run timeline, benefits, references, and a flow legend.
+
+One correction to keep in mind: your source document says the scheduler uses a 20-day rolling window, while the variable name shown is @@date_five_mins_ago. The diagram treats the actual 20-day condition as the intended behavior rather than interpreting that variable name literally.
+
+For your Miro board, I would actually recommend splitting this into 4 separate editable diagrams rather than putting everything on one giant board:
+
+1. Executive / High-Level Flow — the 7 major steps.
+2. Technical Data Flow Architecture — GMR_ATG_TRN, GMR_TRN, FBN_TRN, scheduler, Recon_ATG, and Power BI.
+3. Scheduler + Reconciliation Logic — filters, writer selection, 20-day window, comparison, matched/mismatched/missing.
+4. Detailed Catalogue/Table View — actual provider/view/table names from your screenshots.
+
+That will be considerably easier to understand and maintain in Miro than one huge diagram.
